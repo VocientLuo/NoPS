@@ -20,9 +20,9 @@ val penNormalList = arrayListOf(
     PaintBean(Constants.PEN_ID_HI_PENCIL, PenType.NORMAL, "传统铅笔"),
     PaintBean(Constants.PEN_ID_HI_CARBON, PenType.NORMAL, "碳素笔"),
     PaintBean(Constants.PEN_ID_MULTI_PIC_16, PenType.NORMAL, "边框笔", ),
-    PaintBean(Constants.PEN_ID_HI_PIXEL, PenType.NORMAL, "高阶像素笔", ),
-    PaintBean(Constants.PEN_ID_HI_SOFT, PenType.NORMAL, "高阶柔边笔", ),
-    PaintBean(Constants.PEN_ID_HI_CARBON_PENCILE, PenType.NORMAL, "高阶碳铅笔", ),
+    PaintBean(Constants.PEN_ID_HI_PIXEL, PenType.NORMAL, "像素笔", ),
+    PaintBean(Constants.PEN_ID_HI_SOFT, PenType.NORMAL, "柔边笔", ),
+    PaintBean(Constants.PEN_ID_HI_CARBON_PENCILE, PenType.NORMAL, "碳铅笔", ),
 )
 val penCircleList = arrayListOf(
     PaintBean(Constants.PEN_ID_HI_HAND, PenType.LINE, "手写笔", ),
