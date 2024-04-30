@@ -22,6 +22,7 @@ open class PenBorder : BasePen {
         mPath.moveTo(startX, startY)
         mStartX = startX
         mStartY = startY
+        mPaint.style = Paint.Style.STROKE
         innerPaint = Paint(mPaint)
         innerPaint.color = Color.parseColor("#ffffff")
         innerPaint.strokeWidth = size - 3.dp
