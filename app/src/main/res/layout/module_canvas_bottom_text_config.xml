@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomTextConfig"
+    android:layout_width="match_parent"
+    android:layout_height="305dp"
+    android:background="#222222"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:translationZ="4dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:behavior_skipCollapsed="true"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:id="@+id/tvTitleName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="字号"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="关闭"
+        android:textColor="#333333"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:drawableEndCompat="@mipmap/module_note_aa_icon_guanbi"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitleName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitleName" />
+
+    <View
+        android:id="@+id/viewLine1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="#F7F7F7"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleName" />
+
+    <include
+        android:id="@+id/include_text_size"
+        layout="@layout/module_item_text_size"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/viewLine3"
+        app:layout_constraintTop_toBottomOf="@id/viewLine1" />
+
+    <include
+        android:id="@+id/includeHistoryColor"
+        layout="@layout/module_item_history_color"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/viewLine3"
+        app:layout_constraintTop_toBottomOf="@id/viewLine1" />
+
+    <View
+        android:id="@+id/viewLine3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="20dp"
+        android:background="#E9EAEB"
+        app:layout_constraintTop_toBottomOf="@id/viewLine1" />
+
+    <TextView
+        android:id="@+id/tvSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:padding="20dp"
+        android:text="字号"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:drawableTop="@mipmap/aa_icon_zihao"
+        android:drawablePadding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvColor"
+        app:layout_constraintTop_toBottomOf="@id/viewLine3" />
+
+    <TextView
+        android:id="@+id/tvColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="17dp"
+        android:paddingTop="9dp"
+        android:paddingEnd="17dp"
+        android:paddingBottom="9dp"
+        android:text="颜色"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:drawableTop="@mipmap/aa_icon_yanse"
+        android:drawablePadding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvSize"
+        app:layout_constraintEnd_toEndOf="@+id/tvCopy"
+        app:layout_constraintTop_toBottomOf="@id/viewLine3"/>
+
+
+    <TextView
+        android:id="@+id/tvCopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="17dp"
+        android:paddingTop="9dp"
+        android:paddingEnd="17dp"
+        android:paddingBottom="9dp"
+        android:text="复制"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:drawableTop="@mipmap/aa_icon_fuzhi"
+        android:drawablePadding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvColor"
+        app:layout_constraintEnd_toEndOf="@+id/tvDelete"
+        app:layout_constraintTop_toBottomOf="@id/viewLine3"/>
+
+    <TextView
+        android:id="@+id/tvDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="17dp"
+        android:paddingTop="9dp"
+        android:paddingEnd="17dp"
+        android:paddingBottom="9dp"
+        android:text="删除"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:drawableTop="@mipmap/aa_icon_shanchu"
+        android:drawablePadding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvCopy"
+        app:layout_constraintEnd_toEndOf="@+id/tvSave"
+        app:layout_constraintTop_toBottomOf="@id/viewLine3"/>
+
+    <TextView
+        android:id="@+id/tvSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="保存"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:drawableTop="@mipmap/aa_icon_baocun"
+        android:drawablePadding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvDelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewLine3" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvSize,tvColor,tvCopy,tvDelete,tvSave"
+        app:flow_horizontalStyle="spread"
+        app:flow_horizontalAlign="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvSave"
+        app:layout_constraintTop_toBottomOf="@+id/viewLine3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

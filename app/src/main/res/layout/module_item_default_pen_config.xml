@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/container"
+    android:layout_height="match_parent"
+    android:background="#222222"
+    >
+
+    <TextView
+        android:id="@+id/tvCurrentColorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前色彩："
+        android:textColor="#ffffff"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvHistoryColorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="历史选色："
+        android:textColor="#ffffff"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvCustomColorTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自定义色彩："
+        android:textColor="#ffffff"
+        android:textSize="13sp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="tvCurrentColorTitle,tvHistoryColorTitle,tvCustomColorTitle"
+        app:flow_horizontalAlign="start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvCurrentColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="# 3461E4"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivCurrentColor"
+        app:layout_constraintEnd_toStartOf="@id/ivCurrentColor"
+        app:layout_constraintTop_toTopOf="@id/ivCurrentColor" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivCurrentColor"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvCurrentColorTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvCurrentColorTitle"
+        app:shapeAppearance="@style/module_note_style_round50"
+        app:strokeColor="#D0D0D0"
+        app:strokeWidth="1dp" />
+
+    <ImageView
+        android:id="@+id/ivMoreHistory"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="20dp"
+        android:src="@mipmap/module_note_aa_icon_more"
+        app:layout_constraintBottom_toBottomOf="@id/tvHistoryColorTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvHistoryColorTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rclHistorySmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/tvHistoryColorTitle"
+        app:layout_constraintEnd_toStartOf="@id/ivMoreHistory"
+        app:layout_constraintTop_toTopOf="@id/tvHistoryColorTitle"
+        app:layout_constraintWidth_min="83dp" />
+
+    <View
+        android:id="@+id/viewCustom1"
+        android:layout_width="83dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvHistoryColorTitle"
+        app:layout_constraintEnd_toStartOf="@id/ivMoreCustom"
+        app:layout_constraintTop_toTopOf="@id/tvHistoryColorTitle" />
+
+
+    <ImageView
+        android:id="@+id/ivMoreCustom"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="20dp"
+        android:src="@mipmap/module_note_aa_icon_more"
+        app:layout_constraintBottom_toBottomOf="@id/tvCustomColorTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvCustomColorTitle" />
+
+
+    <ImageView
+        android:id="@+id/viewCustom"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_marginEnd="10dp"
+        android:src="@mipmap/module_note_aa_pic_secai_2"
+        app:layout_constraintBottom_toBottomOf="@id/tvCustomColorTitle"
+        app:layout_constraintEnd_toStartOf="@id/ivMoreCustom"
+        app:layout_constraintTop_toTopOf="@id/tvCustomColorTitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

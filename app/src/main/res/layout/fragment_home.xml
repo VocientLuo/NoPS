@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:background="@color/module_main_bg_color"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDraftView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <TextView
+        android:id="@+id/tvStartDraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:text="开始创作"
+        android:background="@drawable/shape_confirm_btn_bg"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="15dp"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+</RelativeLayout>

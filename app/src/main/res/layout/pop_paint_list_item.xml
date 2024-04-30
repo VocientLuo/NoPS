@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_paint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/draw_huabi_bg_selector"
+    android:orientation="horizontal"
+    android:paddingVertical="10dp"
+    >
+    <TextView
+        android:id="@+id/tv_paint_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center_vertical|right"
+        android:layout_gravity="center_vertical"
+        android:text="曲线"
+        android:textColor="@color/draw_title"
+        android:textSize="10sp" />
+    <com.xluo.core.widget.PenMonitorView
+        android:id="@+id/image_paint_type"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="5"
+        android:background="@drawable/draw_huabi_item_bg"
+        android:padding="1dp"
+        android:foregroundGravity="center"
+        android:scaleType="centerInside"
+        android:layout_marginLeft="10dp"/>
+</LinearLayout>

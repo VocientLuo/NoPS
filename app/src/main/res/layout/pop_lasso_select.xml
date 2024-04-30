@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/draw_paint_pop"
+    android:layout_height="match_parent"
+    android:gravity="bottom|left"
+    android:id="@+id/popBg"
+    android:paddingBottom="200dp">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/pop_layer_bg">
+        <TextView
+            android:id="@+id/tvLasso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="套索"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@mipmap/icon_xq_pre_ts"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2D2D2D"
+            android:layout_marginHorizontal="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tvPaint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="画笔"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@mipmap/icon_xq_hb"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2D2D2D"
+            android:layout_marginHorizontal="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tvRect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="矩形"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@mipmap/icon_xq_jx"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2D2D2D"
+            android:layout_marginHorizontal="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tvOval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="椭圆"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@mipmap/icon_xq_ty"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2D2D2D"
+            android:layout_marginHorizontal="16dp"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:id="@+id/tvMagic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="魔棒"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@mipmap/icon_xq_mb"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+</LinearLayout>

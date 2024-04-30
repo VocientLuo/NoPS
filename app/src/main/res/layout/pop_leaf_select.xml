@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/draw_paint_pop"
+    android:layout_height="match_parent"
+    android:gravity="bottom|left"
+    android:id="@+id/popBg"
+    android:paddingBottom="200dp">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/pop_layer_bg">
+        <TextView
+            android:id="@+id/tvFill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="增加"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@mipmap/icon_xq_pre_zj"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2D2D2D"
+            android:layout_marginHorizontal="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tvClear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="减去"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@mipmap/icon_xq_jq"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

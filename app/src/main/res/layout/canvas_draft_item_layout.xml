@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivCover"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="166:230"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/DefaultRoundImageStyle6dp" />
+
+
+    <TextView
+        android:id="@+id/tvDraftName"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:background="@drawable/module_template_draft_text_bg_bg"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/longActionView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/module_template_draft_long_action_bg_bg"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCover"
+        app:layout_constraintEnd_toEndOf="@+id/ivCover"
+        app:layout_constraintStart_toStartOf="@+id/ivCover"
+        app:layout_constraintTop_toTopOf="@+id/ivCover">
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/module_template_icon_copy_01"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

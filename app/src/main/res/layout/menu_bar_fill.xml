@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@drawable/cavnas_info_bg_round10">
+    <TextView
+        android:id="@+id/tvFillArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="填充"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:padding="10dp"
+        android:drawableTop="@mipmap/icon_lyb_pre_tc"
+        />
+    <TextView
+        android:id="@+id/tvClearArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="擦除"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:padding="10dp"
+        android:drawableTop="@mipmap/icon_lyb_qc"
+        />
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewContainer"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_progress_dialog_content_bg"
+    android:minHeight="150dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="23dp">
+
+        <ProgressBar
+            android:id="@+id/normalBar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:indeterminateDrawable="@drawable/red_circle_pbar" />
+
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="19dp"
+            android:singleLine="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="0%"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="19dp"
+        android:singleLine="true"
+        android:text="请等待…"
+        android:textColor="#999999"
+        android:textSize="14sp" />
+
+</LinearLayout>

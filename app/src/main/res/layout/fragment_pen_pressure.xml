@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/canvas_main_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+            <TextView
+                android:id="@+id/tvPenSizePress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="压感"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <Switch
+                android:id="@+id/scPenPressActive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:id="@+id/tvPenMinSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvPenSizePress"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="最小直径"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/tvPenAppearText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/scPenPressActive"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="0%"
+                android:textColor="#999999"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                />
+
+            <SeekBar
+                android:id="@+id/sbPenSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvPenMinSize"
+                android:layout_marginTop="10dp"
+                android:progress="1"
+                android:min="1"
+                android:max="100"
+                android:maxHeight="10dp"
+                android:progressDrawable="@drawable/seekbar_track"
+                android:thumb="@drawable/seekbar_thumb"
+                android:splitTrack="false"
+                />
+
+            <TextView
+                android:id="@+id/tvPenSpeedMoni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/sbPenSize"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="速度模拟画笔压力"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                />
+
+            <Switch
+                android:id="@+id/scPenSpeedMoni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/sbPenSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="UseSwitchCompatOrMaterialXml"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

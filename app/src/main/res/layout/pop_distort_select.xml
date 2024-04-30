@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/draw_paint_pop"
+    android:layout_height="match_parent"
+    android:gravity="bottom|left"
+    android:id="@+id/popBg"
+    android:paddingBottom="200dp">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/pop_layer_bg">
+        <TextView
+            android:id="@+id/tvPush"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="推"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/icon_t_yh_pre"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2D2D2D"
+            android:layout_marginHorizontal="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tvReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="恢复"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/icon_hf_yh"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2D2D2D"
+            android:layout_marginHorizontal="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tvLtoR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="右旋转"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/icon_yxz_yh"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2D2D2D"
+            android:layout_marginHorizontal="16dp"
+            />
+
+        <TextView
+            android:id="@+id/tvRtoL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="左旋转"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/icon_zxz_yh"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2D2D2D"
+            android:layout_marginHorizontal="16dp"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:id="@+id/tvShrink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="捏合"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/icon_nh_yh"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"
+            android:visibility="visible"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2D2D2D"
+            android:layout_marginHorizontal="16dp"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:id="@+id/tvExtend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="扩展"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/icon_kz_yh"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="10dp"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+</LinearLayout>

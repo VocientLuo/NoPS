@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/canvas_main_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+            <TextView
+                android:id="@+id/tvPenInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="画笔信息"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tvPenName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvPenInfo"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="16dp"
+                android:text="画笔名称: 铅笔"
+                android:textColor="#999999"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/pen_setting_nav_item_bg_sel"
+                />
+
+            <TextView
+                android:id="@+id/tvPenReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvPenName"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingVertical="10dp"
+                android:gravity="center"
+                android:text="重置画笔"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/pen_setting_nav_item_selector"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

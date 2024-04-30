@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/canvas_main_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/aa_icon_back" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDrawTimes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:text="笔刷设置"
+                />
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@mipmap/aa_icon_more"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/draw_drawing_bg"
+            android:paddingHorizontal="16dp">
+
+            <com.xluo.core.widget.PenMonitorView
+                android:id="@+id/penMonitorView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+            <LinearLayout
+                android:id="@+id/llSettingNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+                <TextView
+                    android:id="@+id/tvPenTop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="笔尖"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/black_90"
+                    android:background="@drawable/pen_setting_nav_item_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvLine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="线条"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/black_90"
+                    android:background="@drawable/pen_setting_nav_item_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvRender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="渲染"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/black_90"
+                    android:background="@drawable/pen_setting_nav_item_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvPressure"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="压感"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/black_90"
+                    android:background="@drawable/pen_setting_nav_item_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvAbout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="关于"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/black_90"
+                    android:background="@drawable/pen_setting_nav_item_selector"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vpContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
