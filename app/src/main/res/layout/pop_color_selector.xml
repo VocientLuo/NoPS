@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:background="@color/draw_paint_pop"
     android:layout_height="match_parent"
-    android:gravity="bottom"
+    android:gravity="top"
     android:id="@+id/llEmpty"
-    android:paddingBottom="@dimen/pop_bottom_padding">
+    android:paddingLeft="45dp"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

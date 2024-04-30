@@ -11,7 +11,6 @@ import com.xluo.nops.adapter.PenModeAdapter
 import com.xluo.nops.bean.penMixModeList
 import com.xluo.nops.databinding.PopPenModeSelectBinding
 import com.xluo.pen.bean.PaintBean
-import com.xluo.pen.bean.penPictureList
 import com.xluo.pen.core.PenMixMode
 
 class PopPenModeSelector : PopupWindow {
@@ -48,8 +47,6 @@ class PopPenModeSelector : PopupWindow {
     }
 
     private fun initPaintInfo() {
-        val paintList = arrayListOf<PaintBean>()
-        paintList.addAll(penPictureList)
         penModeAdapter = PenModeAdapter(mContext, penMixModeList)
         val typeLayoutManager = LinearLayoutManager(mContext)
         typeLayoutManager.orientation = RecyclerView.VERTICAL

@@ -320,28 +320,28 @@ class DrawBoardActivity : BaseViewModelActivity<MainCanvasModel, ActivityCanvasM
         binding.ivMenu.setOnClickListener {
             popSettingMenu.showAsDropDown(it, Gravity.RIGHT, 0, 0)
         }
-        binding.layoutHuabi.setOnClickListener {
+        binding.imageHuabi.setOnClickListener {
             onPaintChanged()
             // 画笔选择
             showBottomMenu(menuPaintIcon)
-            popPaintSelector.showAtLocation(it, Gravity.BOTTOM, -80, 0)
+            popPaintSelector.showAsDropDown(it, Gravity.RIGHT, 0, 0)
             popPaintSelector.updateCurrentPen(mCurrentPaint)
         }
-        binding.layoutColor.setOnClickListener {
+        binding.imageColor.setOnClickListener {
             // 颜色选择器
             showBottomMenu(menuColorIcon)
-            showPopup(popColorSelector, it)
+            popColorSelector.showAsDropDown(it, Gravity.RIGHT, 0, 0)
         }
-        binding.layoutXp.setOnClickListener {
+        binding.imageXp.setOnClickListener {
             // 橡皮擦
             showBottomMenu(menuEraseIcon)
             mCurrentPaint.id = Constants.PEN_ID_ERASE
             onPaintChanged()
         }
-        binding.layoutLayer.setOnClickListener {
+        binding.imageLayer.setOnClickListener {
             // 图层展示，先更新图层数据，确保数据对齐
             onLayerListUpdate()
-            showPopup(popLayerList, it)
+            popLayerList.showAsDropDown(it)
             onPaintChanged()
         }
         // 缩放监听
@@ -408,7 +408,7 @@ class DrawBoardActivity : BaseViewModelActivity<MainCanvasModel, ActivityCanvasM
         binding.pickColorView.onColorPicked = {
             mCurrentPaint.color = it
             onPaintChanged()
-            showPopup(popColorSelector, binding.layoutColor)
+            popColorSelector.showAsDropDown(binding.imageColor, Gravity.RIGHT, 0, 0)
         }
         cutBinding = MenuBarCutBinding.inflate(layoutInflater)
         distortBinding = MenuBarDistortBinding.inflate(layoutInflater)
@@ -634,7 +634,7 @@ class DrawBoardActivity : BaseViewModelActivity<MainCanvasModel, ActivityCanvasM
             "取消", "修改"
         )
         dialog.setConfirmListener {
-            showPopup(popBgColorSelector, binding.layoutColor)
+            showPopup(popBgColorSelector, binding.imageColor)
         }
         dialog.setCancelable(true)
         dialog.show()
@@ -1119,7 +1119,7 @@ class DrawBoardActivity : BaseViewModelActivity<MainCanvasModel, ActivityCanvasM
         binding.pvsEditView.currentPen = mPen
         binding.pvsEditView.editMode = PvsEditView.EditMode.EDITOR
         binding.sbAlpha.isEnabled = mPen.alphaEnabled
-        binding.layoutColor.isEnabled = mPen.colorEnabled
+        binding.imageColor.isEnabled = mPen.colorEnabled
         binding.sbAlpha.progress = 255-mPen.alpha
         binding.sbSize.progress = mPen.size
         popColorSelector.setSelectColor(mPen.color)
@@ -1139,10 +1139,7 @@ class DrawBoardActivity : BaseViewModelActivity<MainCanvasModel, ActivityCanvasM
     private fun updateBottomMenu() {
         binding.imageHuabi.setMenuState(menuPaintIcon)
         binding.imageXp.setMenuState(menuEraseIcon)
-        binding.tvHuabi.setMenuState(menuPaintIcon)
-        binding.tvXp.setMenuState(menuEraseIcon)
         binding.imageColor.setMenuState(menuColorIcon)
-        binding.tvColor.setMenuState(menuColorIcon)
     }
 
     private fun initCanvas() {
@@ -1388,7 +1385,7 @@ class DrawBoardActivity : BaseViewModelActivity<MainCanvasModel, ActivityCanvasM
 
     private fun disableToolsBar() {
         with(binding) {
-            llBottomBar.children.forEach {
+            rlSideBar.children.forEach {
                 it.isEnabled = false
             }
 
@@ -1398,7 +1395,7 @@ class DrawBoardActivity : BaseViewModelActivity<MainCanvasModel, ActivityCanvasM
             ivTenMenu.isEnabled = false
             if (isEditTextLayer) {
                 // 编辑文本时，可以选择颜色
-                layoutColor.isEnabled = true
+                imageColor.isEnabled = true
                 showBottomMenu(menuColorIcon)
             }
         }
@@ -1406,7 +1403,7 @@ class DrawBoardActivity : BaseViewModelActivity<MainCanvasModel, ActivityCanvasM
 
     private fun enabledToolsBar() {
         with(binding) {
-            llBottomBar.children.forEach {
+            rlSideBar.children.forEach {
                 it.isEnabled = true
             }
 

@@ -3,12 +3,13 @@ package com.xluo.pen.bean
 
 enum class PenType {
     NONE,
-    TRADITION,
-    PICTURE,
-    CUSTOM,
     SHAPE,
-    HI_PEN,
+    NORMAL,
+    CIRCLE,
+    MATERIAL,
+    LINE,
     HISTORY,
+    CUSTOM,
 }
 
 data class PaintType(

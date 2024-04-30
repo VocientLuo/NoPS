@@ -45,6 +45,7 @@ dependencies {
     implementation "com.github.skydoves:colorpickerview:2.2.4"
     api 'com.dingmouren.colorpicker:colorpicker:1.0.1'
     implementation 'com.github.yalantis:ucrop:2.2.9'
+    implementation 'com.github.Jay-Goo:RangeSeekBar:v2.0.4'
     implementation rootProject.ext.library.room
     kapt rootProject.ext.library.roomprocessor
     implementation rootProject.ext.library.roomktx

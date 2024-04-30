@@ -14,8 +14,10 @@ import com.xluo.pen.PenManager
 import com.xluo.pen.bean.PaintBean
 import com.xluo.pen.bean.PaintType
 import com.xluo.pen.bean.PenType
-import com.xluo.pen.bean.penHiList
-import com.xluo.pen.bean.penPictureList
+import com.xluo.pen.bean.penCircleList
+import com.xluo.pen.bean.penLineList
+import com.xluo.pen.bean.penMaterialList
+import com.xluo.pen.bean.penNormalList
 import com.xluo.pen.bean.penTypeList
 
 class PopPaintSelector : PopupWindow {
@@ -61,18 +63,17 @@ class PopPaintSelector : PopupWindow {
             PenType.HISTORY -> {
                 renderPenList(historyPenList)
             }
-            PenType.HI_PEN -> {
-                renderPenList(penHiList)
+            PenType.NORMAL -> {
+                renderPenList(penNormalList)
             }
-
-            PenType.PICTURE -> {
-                renderPenList(penPictureList)
+            PenType.CIRCLE -> {
+                renderPenList(penCircleList)
             }
-            PenType.NONE -> {
-
+            PenType.LINE -> {
+                renderPenList(penLineList)
             }
-            PenType.CUSTOM -> {
-
+            PenType.MATERIAL -> {
+                renderPenList(penMaterialList)
             }
             else -> {
             }

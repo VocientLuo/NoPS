@@ -6,8 +6,8 @@ data class PaintBean(
     var id: Int,
     var penType: PenType,
     var name: String,
-    var path: String,
-    var select: Int,
+    var path: String = "",
+    var select: Int = 0,
     var color: Int = Color.BLACK,
 ) {
     fun copy(): PaintBean {
