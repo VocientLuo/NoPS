@@ -1,6 +1,6 @@
 # NoPS
 
-高仿画世界pro
+仿画世界pro
 
 通过room+mvvm...实现
 
