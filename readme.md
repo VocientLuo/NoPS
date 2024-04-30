@@ -32,9 +32,9 @@
 - [ ] 画笔增加
 
 # 效果图
-[img](./screenshot/home_create.png)
-[img](./screenshot/size_select.png)
-[img](./screenshot/draw_pen.png)
-[img](./screenshot/pen_setting.png)
-[img](./screenshot/draw_tools.png)
-[img](./screenshot/room.png)
+![img](./screenshot/home_create.png)
+![img](./screenshot/size_select.png)
+![img](./screenshot/draw_pen.png)
+![img](./screenshot/pen_setting.png)
+![img](./screenshot/draw_tools.png)
+![img](./screenshot/room.png)
