@@ -15,14 +15,6 @@ pluginManagement {
         //mintegral sdk依赖   引入mintegral sdk需要添加此maven
         maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_support/" }
 
-        //公司maven私服
-        maven {
-            url "https://packages.aliyun.com/maven/repository/2059818-release-mYrrDg/"
-            credentials {
-                username '611dcf0c1069a2b099fef257'
-                password 'BSYRFZsTXZv4'
-            }
-        }
     }
 }
 
@@ -43,14 +35,6 @@ dependencyResolutionManagement {
         //mintegral sdk依赖   引入mintegral sdk需要添加此maven
         maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_support/" }
 
-        //公司maven私服
-        maven {
-            url "https://packages.aliyun.com/maven/repository/2059818-release-mYrrDg/"
-            credentials {
-                username '611dcf0c1069a2b099fef257'
-                password 'BSYRFZsTXZv4'
-            }
-        }
     }
 }
 
