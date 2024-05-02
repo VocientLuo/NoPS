@@ -18,7 +18,7 @@ abstract class DraftDB: RoomDatabase() {
                 BaseApplication.instance.applicationContext,
                 DraftDB::class.java,
                 "draft.db"
-            ).build()
+            ).allowMainThreadQueries().build()
         }
     }
 }
