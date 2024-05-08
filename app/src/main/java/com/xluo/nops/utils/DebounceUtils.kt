@@ -1,4 +1,4 @@
-package com.ajj.module_canvas_lxz.utils
+package com.xluo.nops.utils
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

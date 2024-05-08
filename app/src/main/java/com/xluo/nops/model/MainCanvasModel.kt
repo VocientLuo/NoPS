@@ -14,7 +14,7 @@ import androidx.lifecycle.MutableLiveData
 import com.xluo.nops.bean.DRAW_DRAFT_TYPE
 import com.xluo.nops.bean.DraftBean
 import com.xluo.nops.bean.Layer
-import com.ajj.module_canvas_lxz.utils.CacheUtil
+import com.xluo.nops.utils.CacheUtil
 import com.blankj.utilcode.util.GsonUtils
 import com.blankj.utilcode.util.ImageUtils
 import com.blankj.utilcode.util.LogUtils

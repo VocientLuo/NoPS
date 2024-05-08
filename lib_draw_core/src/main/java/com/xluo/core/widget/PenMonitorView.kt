@@ -179,9 +179,8 @@ open class PenMonitorView : ImageView {
                 }
                 if (pressure > minPress) {
                     pressure -= pOffset
-                }
-                if (pressure < minPress) {
-                    pressure = minPress
+                } else {
+                    break
                 }
             }
         }
