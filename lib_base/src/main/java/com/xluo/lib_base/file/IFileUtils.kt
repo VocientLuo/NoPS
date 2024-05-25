@@ -51,7 +51,6 @@ class IFileUtils {
         if (checkUse()) {
             val file = mContext!!.filesDir.path
             dir = file.toString()
-            Log.d("luoxizhong", "file utils:${dir}")
         }
         return dir
     }

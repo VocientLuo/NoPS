@@ -14,7 +14,7 @@ import com.xluo.pen.shape.PenBezier;
 
 
 /**
- * @author luoxizhong
+ * @author xluo
  * @version v1.0 create at 2022/12/10
  * @des 粉笔
  */

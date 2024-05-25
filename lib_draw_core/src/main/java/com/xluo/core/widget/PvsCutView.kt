@@ -29,7 +29,7 @@ import kotlin.math.min
 
 
 /**
- * Create by luoxizhong
+ * Create by xluo
  * Time:2023/7/24
  * 选区裁剪
  */
@@ -75,7 +75,9 @@ class PvsCutView : PvsTouchView {
     // 非选中区半透明黑色
     private val coverColor = Color.parseColor("#5f000000")
 
-    private val dashPaint = Paint()
+    private val dashPaint = Paint().apply {
+        color = Color.RED
+    }
 
     private val lassoInfoList = arrayListOf<LassoData>()
 
@@ -88,7 +90,7 @@ class PvsCutView : PvsTouchView {
 
     var targetPath = Path()
 
-    var dashSize = 6f
+    var dashSize = 8f
 
     private var lastPointX = 0f
     private var lastPointY = 0f

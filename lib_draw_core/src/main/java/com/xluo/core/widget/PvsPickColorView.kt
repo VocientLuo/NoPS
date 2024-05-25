@@ -11,7 +11,7 @@ import android.view.MotionEvent
 import com.xluo.draw_core.R
 
 /**
- * Create by luoxizhong
+ * Create by xluo
  * Time:2023/7/24
  * 颜色吸取控件
  */
