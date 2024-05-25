@@ -4,6 +4,7 @@ import android.view.Gravity
 import android.view.View
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
+import com.xluo.core.constants.Constants
 import com.xluo.lib_base.ui.BaseViewModelFragment
 import com.xluo.nops.databinding.FragmentPenTopBinding
 import com.xluo.nops.ui.activity.PenSettingActivity
@@ -38,6 +39,7 @@ class PenTopFragment : BaseViewModelFragment<PenSettingModel, FragmentPenTopBind
             binding.tvPenXModeSelect.text = "${it.name}"
             updatePen()
         }
+        binding.sbPenSize.max = Constants.MAX_PEN_SIZE
         binding.sbPenSize.setOnSeekBarChangeListener(object: OnSeekBarChangeListener {
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
                 binding.tvPenSizeText.text = "$p1"

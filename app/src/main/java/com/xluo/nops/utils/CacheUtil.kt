@@ -1,13 +1,8 @@
-package com.ajj.module_canvas_lxz.utils
+package com.xluo.nops.utils
 
 import android.app.Application
-import android.content.Context
-import android.content.Intent
 import android.graphics.Bitmap
-import android.net.Uri
-import android.os.Environment
 import com.blankj.utilcode.util.FileUtils
-import com.blankj.utilcode.util.ZipUtils
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream

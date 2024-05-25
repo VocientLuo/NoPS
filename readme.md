@@ -1,8 +1,6 @@
 # NoPS
 
-仿画世界pro
-
-通过room+mvvm...实现
+高阶画板
 
 # 实现功能
 
@@ -19,7 +17,7 @@
     - [x] 复制剪切
 - [x] 撤销重做
 - [x] 文字添加、图片添加
-- [x] 液化（效果没画世界好，需优化算法）
+- [x] 液化
 - [x] 柳叶笔，增加删除
 - [x] 吸管
 - [x] 形状
@@ -31,10 +29,13 @@
 - [ ] 3d画
 - [ ] 画笔增加
 
-# 效果图
+# 效果
 ![img](./screenshot/home_create.png)
 ![img](./screenshot/size_select.png)
 ![img](./screenshot/draw_pen.png)
 ![img](./screenshot/pen_setting.png)
 ![img](./screenshot/draw_tools.png)
 ![img](./screenshot/room.png)
+
+# 魔棒效果
+![img](./screenshot/magic_wand.gif)

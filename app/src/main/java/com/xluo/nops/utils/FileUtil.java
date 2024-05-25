@@ -14,7 +14,7 @@
  *      limitations under the License.
  */
 
-package com.ajj.module_canvas_lxz.utils;
+package com.xluo.nops.utils;
 
 import android.content.ActivityNotFoundException;
 import android.content.ContentResolver;

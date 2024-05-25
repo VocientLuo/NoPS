@@ -1,6 +1,9 @@
 package com.xluo.nops.ui.activity
 
 import android.Manifest
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
@@ -24,7 +27,8 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.core.view.children
-import com.ajj.module_canvas_lxz.utils.DebounceUtils
+import androidx.core.view.isVisible
+import com.xluo.nops.utils.DebounceUtils
 import com.xluo.nops.utils.PermissUtils
 
 import com.xluo.nops.copyFileToCacheDir
@@ -200,7 +204,7 @@ class DrawBoardActivity : BaseViewModelActivity<MainCanvasModel, ActivityCanvasM
 //            UCrop.of(Uri.fromFile(cacheFile), distinctUri)
 //                .withAspectRatio(1f, 1f)
 //                .withMaxResultSize(100, 100)
-//                //.start(this@DrawBoardActivity)
+//                //.start(this@DrawBoardActivfity)
 //                .start(this@DrawBoardActivity, REQUEST_CROP)
         }
     }
@@ -344,6 +348,11 @@ class DrawBoardActivity : BaseViewModelActivity<MainCanvasModel, ActivityCanvasM
             popLayerList.showAsDropDown(it)
             onPaintChanged()
         }
+
+        binding.ivSlideHideShow.setOnClickListener {
+            showOrHideSlideBar()
+        }
+
         // 缩放监听
         binding.fmZoomView.setZoomLayoutGestureListener(object: ZoomView.ZoomLayoutGestureListener {
             override fun onZoomChanged(scale: Int, rotation: Int) {
@@ -413,6 +422,7 @@ class DrawBoardActivity : BaseViewModelActivity<MainCanvasModel, ActivityCanvasM
         cutBinding = MenuBarCutBinding.inflate(layoutInflater)
         distortBinding = MenuBarDistortBinding.inflate(layoutInflater)
         fillBinding = MenuBarFillBinding.inflate(layoutInflater)
+        binding.sbSize.max = Constants.MAX_PEN_SIZE
         initHistoryPen()
         initPopups()
         initCutBar()
@@ -422,6 +432,27 @@ class DrawBoardActivity : BaseViewModelActivity<MainCanvasModel, ActivityCanvasM
         initPaint()
         initData()
         initSeekBars()
+    }
+
+    private fun showOrHideSlideBar() {
+        if (binding.rlSideBar.isVisible) {
+            binding.rlSideBar.hide()
+            val anim = ObjectAnimator.ofFloat(binding.ivSlideHideShow, "rotation", 0f, 90f).apply {
+                duration = 300
+            }
+            anim.addListener(object : AnimatorListenerAdapter() {
+                override fun onAnimationEnd(animation: Animator) {
+                    super.onAnimationEnd(animation)
+                    binding.ivSlideHideShow.rotation = 90f
+                    binding.ivSlideHideShow.alpha = 1.0f
+                }
+            })
+            anim.start()
+        } else {
+            binding.rlSideBar.show()
+            binding.ivSlideHideShow.rotation = 0f
+            binding.ivSlideHideShow.alpha = 0.5f
+        }
     }
 
     private fun initHistoryPen() {

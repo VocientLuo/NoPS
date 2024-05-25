@@ -110,11 +110,12 @@ object Constants {
 
     const val DEFAULT_ERASE_SIZE = 80
     const val DEFAULT_PEN_SIZE = 20
-    const val MAX_PEN_SIZE = 100
+    const val MAX_PEN_SIZE = 200
 
     /**-----------------------------------
      * 画笔
      * 线性笔
+     *
      */
     const val PEN_ID_BOARD = 0
 
